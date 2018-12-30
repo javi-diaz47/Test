@@ -1,7 +1,6 @@
 body{
   margin: 0;
-  position: relative;
-  z-index: 2;
+  background-color: #888;
 }
 img{
   max-width: 100%;
@@ -12,21 +11,23 @@ h3{
 }
 .alert{
   background: #056fff;
-  width: 400px;
-  height: 100px;
+  width: 30%;
+  height: 10%;
   border-radius: 5px;
   color: white;
   font-family: sans-serif;
   position: fixed;
   padding: 10px;
-  box-shadow: 3px 5px 5px #808080;
+  box-shadow: 3px 5px 10px #111;
   z-index: 4;
   bottom: 130vh;
-  left: 30%;
+  left: 50%;
+  transform: translate(-50%);
   transition: .3s;
 }
 span{
   display: block;
+  margin: 5px 0;
 }
 button{
   width: 60px;
@@ -50,7 +51,7 @@ button:hover{
   bottom: 50vh;
 }
 .dark{
-  background: grey;
+  background: #333;
 }
 .container{
   width: 100%;
@@ -58,4 +59,9 @@ button:hover{
   position: relative;
   z-index: 3;
   transition: .2s;
+}
+@media screen and (max-width: 1023px) {
+  .alert{
+    width: 60%;
+  }
 }

@@ -65,8 +65,12 @@ async function req () {
   const character = await response.json()
   const responseHome = await fetch(`https://swapi.co/api/planets/${randomNum}/`)
   const homeworld = await responseHome.json()
+    if (character.birth_year == 'unknown') {
+      $text.innerHTML = `${character.name} nacío en ${homeworld.name} `
+      console.log(`${character.name} nacío en ${homeworld.name}  `)
+    } else {
+      $text.innerHTML = `${character.name} nacío en ${homeworld.name} en el año ${character.birth_year}`
+      console.log(`${character.name} nacío en ${homeworld.name} en el año ${character.birth_year} `)
+    }
 
-    $text.innerHTML = `${character.name} nacío en ${homeworld.name} en el año ${character.birth_year}`
-    console.log(`${character.name} nacío en ${homeworld.name} en el año ${character.birth_year} `)
-    
 }
