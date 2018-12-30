@@ -2,10 +2,7 @@ body{
   margin: 0;
   background-color: #888;
 }
-img{
-  max-width: 100%;
-  display: none;
-}
+
 h3{
   margin: 0 0 10px;
 }

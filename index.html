@@ -7,10 +7,22 @@
   <link rel="stylesheet" href="master.css">
   <title>T E S T</title>
   <style media="screen">
+    img{
+      max-width: 100%;
+      vertical-align: top;
+    }
+    img{
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      img#RD{
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
-
+  <img src="images/responsive.png" id="RD"alt="">
   <div class="alert" id="alert">
     <h3>Alert</h3>
     <span class="text" id="text"></span>
@@ -19,11 +31,10 @@
 
     <div class="container" id="container">
       <button type="button" name="button" id="btn">Alert</button>
-    <img src="images/header.jpg" alt="">
-    <img src="images/1.jpg" alt="">
-    <img src="images/2.jpg" alt="">
-    <img src="images/footer.jpg" alt="">
     <!-- <button id="btn">Tocame prro >:v !</button> -->
+    <div class="box">
+
+    </div>
 
   </div>
 
