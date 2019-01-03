@@ -2,42 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="master.css">
-  <title>T E S T</title>
+  <title>Invie - tus mejores guitarras</title>
   <style media="screen">
-  body{
-    border: 10px solid #192b36;
-  }
-  @media screen and (max-width: 767px) {
-    img#rd{
-      display: block
-    }
-  }
+    @font-face{font-family:'icomoon';src:url(../fonts/fonts/icomoon.eot?loefpa);src:url(../fonts/fonts/icomoon.eot?loefpa#iefix) format("embedded-opentype"),url(../fonts/fonts/icomoon.ttf?loefpa) format("truetype"),url(../fonts/fonts/icomoon.woff?loefpa) format("woff"),url(../fonts/fonts/icomoon.svg?loefpa#icomoon) format("svg");font-weight:400;font-style:normal}[class*=" icon-"]{font-family:'icomoon'!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-menu:before{content:"\e9bd"}body{font-family:'Allerta',sans-serif;margin:0;display:flex;flex-direction:column;justify-content:space-between;min-height:100vh}.background{background-color:#466173;background-image:url(../images/background.png);background-size:cover}.contenedor{max-width:800px;margin:auto;position:relative}.header{position:relative}.menu{font-size:24px;display:inline-block;position:absolute;right:0}.menu a{color:#fff;text-decoration:none}.menu li{display:inline-block;margin-left:30px}.menu li:before{content:'«';line-height:20px;color:#fff}.logotipo{display:inline-block;margin-left:0}.titulo{font-family:'Montserrat',sans-serif;font-size:70px;margin-top:70px;margin-bottom:0;line-height:60px}.titulo span{text-decoration:underline}.resumen{font-size:24px;margin-top:0;margin-bottom:0;line-height:80px}.button{border:none;border-radius:12px;background:#fd324e;color:#fff;padding:7px 12px;text-decoration:none;font-size:18px;background:linear-gradient(to left,#fe344e,#ff7250)}.guitarras{color:#1F313C}.guitarras h2{font-family:'Montserrat',sans-serif;font-size:35px}.portada{color:#fff;padding:20px;height:500px}.burger-button{width:40px;border-radius:50%;line-height:40px;height:40px;background:#395667;display:inline-block;text-align:center;position:fixed;left:20px;top:20px;color:#fff;z-index:3;display:none}.contenedor-iframe{position:relative;padding-top:56.25%}.iframe{position:absolute;left:0;rigth:0;top:0;bottom:0;width:100%;height:100%}.video-demo{max-width:500px;width:100%;border:5px solid #3c5b6e}.video-demo-contenedor{display:flex;justify-content:center;margin-bottom:80px}@media screen and (max-width:800px){.portada{height:auto}.titulo{font-size:45px;margin-top:30px}.resumen{font-size:18px;line-height:30px;margin-bottom:10px}.portada .button{display:inline-block;margin-bottom:30px}.video-demo-contenedor{margin-bottom:30px}.guitarras{text-align:center}}@media screen and (max-width:650px){.header{text-align:center}.logotipo{margin:0}.menu{position:static;display:block}.menu li:first-child{margin:0}.menu ul{padding:0}.video-demo-contenedor{margin:0 10px 30px}}@media screen and (max-width:500px){.burger-button{display:block}.portada .contenedor{position:static}.header{position:static}.menu{background:rgba(255,60,88,.8);position:fixed;left:-100%;top:0;z-index:2;bottom:0;right:0;display:flex;width:100%;align-items:center}.menu ul{flex:1}.menu li:first-child{border-top:1px solid #fff}.menu li{display:block;margin:0;padding:8px 0;border-bottom:1px solid #fff}.menu li:before{display:none}.portada{text-align:center}.titulo{font-size:30px}.resumen{font-size:16px}.portada .button{display:block}}@media screen and (-webkit-min-device-pixel-radio:2){.background{background-image:url(../images/background2x.png)}}
   </style>
 </head>
 <body>
-  <h1>The best box here</h1>
-  <img src="images/responsive.png" id="rd" alt="">
+  <section class="portada background">
+    <header id="header" class="header contenedor">
+      <figure class="logotipo">
+      <img src="images/invie.png" secset="invie.png 1x, invie2x.png 2x" width="186" height="60"alt="Invie Logotipo">
+    </figure>
+    <span class="burger-button icon-menu" id="burger-button"></span>
+    <nav class="menu" id="menu">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+           <a href="#guitarras">Guitarras</a>
+        </li>
+        <li>
+          <a href="precios.html">Precios</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+    <div class="contenedor">
+      <h1 class="titulo">Guitarras <span>invie</span>sibles</h1>
+      <h3 class="resumen">Sé la estrella de rock que siempre quisiste ser</h3>
+      <a class="button"type="button" name="button" href="#guitarras">Conoce más</a>
+    </div>
+  </section>
+  <section class="guitarras contenedor" id="guitarras">
+    <h2>Nuestras guitarras</h2>
+    <div class="video-demo-contenedor">
+      <div class="video-demo">
+        <div class="contenedor-iframe">
+          <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <article class="guitarra guitarra1">
+      <img class="right" src="images/invie-acustica.png" srcset="images/invie-acustica.png 1x, images/invie-acustica2x.png 2x" width="350" alt="Guitarra invie acústica">
+      <div class="contenedor-guitarra1">
+        <h3 class="titulo-guitarra1">Invie Acústica</h3>
+        <ol>
+          <li>Estilo vintage</li>
+          <li>Madera pura</li>
+          <li>Incluye estuche invisible de aluminio</li>
+        </ol>
+      </div>
+    </article>
+    <article class="guitarra guitarra2 b">
+      <img class="left" data-src="images/invie-classic.png| images/invie-classic2x.png" width="350" alt="Guitarra invie classic">
+      <div class="contenedor-guitarra2">
+        <h3 class="titulo-guitarra2">Invie classic</h3>
+        <ol>
+          <li>Estilo vintage</li>
+          <li>Liviana</li>
+          <li>Inicia tu camino como rockstar</li>
+        </ol>
+      </div>
+    </article>
+  </section>
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="contacto">
+        <img data-src="images/invie-white.png | images/invie-white2x.png " alt="logotipo blanco" width="300px">
+        <a href="tel:+57302454132"><strong>Telefono</strong> <span>302454132</span></a>
+        <a href="mailto:contacto@invie.com" ><strong>E-mail</strong><span>contacto@invie.com</span></a>
+      </div>
+      <form class="formulario">
+        <div class="col1">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" value="" id="nombre">
+        <label for="e-mail">E-mail</label>
+        <input type="E-mail" name="email" value="" id="e-mail">
+          <div class="sexo">
+            <label for="hombre">
+              <input type="radio" name="sexo" value="hombre" id="hombre">Hombre
+            </label>
+            <label for="mujer">
+              <input type="radio" name="sexo" value="mujer" id="mujer" checked>Mujer
+            </label>
+          </div>
+          <div class="intereses">
+            <label for="">
+              <input type="checkbox" name="intereses" value="cotizacion" id="cotizacion" checked> Cotizacion
+            </label>
+            <label for="">
+              <input type="checkbox" name="intereses" value="intereses" id="intereses"> Intereses
+            </label>
+            <label for="">
+              <input type="checkbox" name="intereses" value="comentarios" id="comentarios"> Comentarios
+            </label>
+            <label for="">
+              <input type="checkbox" name="intereses" value="otros" id="Otros"> Otros
+            </label>
+          </div>
+        </div>
+        <div class="col2">
+          <label for="Comentaros"> Comentarios </label>
+          <textarea name="Comentarios" rows="7" cols="30" id="comentarios"></textarea>
+          <input type="submit" name="" class="button">
+        </div>
+      </form>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script >
+  let $burgerButton = document.getElementById('burger-button')
+  let $menu = document.getElementById('menu')
+  function toggleMenu (){
+    $menu.classList.toggle('active')
+    $burgerButton.classList.toggle('icon-close')
+    document.body.classList.toggle('opened')
+  }
+  function showMenu (){
+    $menu.classList.add('active')
+    $burgerButton.classList.toggle('icon-close')
+    document.body.classList.toggle('opened')
+  }
+  function hideMenu (){
+    $menu.classList.remove('active')
+    $burgerButton.classList.toggle('icon-close')
+    document.body.classList.toggle('opened')
+  }
+  let consulta = window.matchMedia('(max-width: 500px)')
+  consulta.addListener(mediaQuery)
+  function mediaQuery(){
+    if (consulta.matches) {
+      $burgerButton.addEventListener('touchstart',toggleMenu)
 
-  <div class="alert" id="alert">
-    <h3>Alert</h3>
-    <span class="text" id="text"></span>
-    <button id="btn-alert" type="button" name="button">Thx ;)</button>
-  </div>
+    }else{
+      $burgerButton.removeEventListener('touchstart',toggleMenu)
 
-    <div class="container" id="container">
-      <button type="button" name="button" id="btn">Alert</button>
-    <img src="images/header.jpg" alt="">
-    <img src="images/1.jpg" alt="">
-    <img src="images/2.jpg" alt="">
-    <img src="images/footer.jpg" alt="">
-    <!-- <button id="btn">Tocame prro >:v !</button> -->
+      console.log('No se cumplio la condicion')
+    }
+  }
+   mediaQuery()
 
-  </div>
-
-
-  <script type="text/javascript" src="script.js"></script>
+  // Lazy loading
+  let bLazy = new Blazy({
+    //options
+    selector: 'img'
+  })
+  // Gestos
+  let $body = document.body
+  //swipeleft
+  var gestos= new Hammer($body);
+  gestos.on('swipeleft', hideMenu)
+  // swiperight
+  gestos.on('swiperight', showMenu)
+  // let hammeright = new Hammmer('$body')
+  // hammer.on('swiperight', (ev)=> console.log(ev))
+  // Fuentes
+  WebFont.load({
+    google: {
+      families: ['Montserrat:400,700', 'Allerta']
+    }
+  })
+  </script>
+  <link rel="stylesheet" href="css/style.min.css">
 </body>
 </html>

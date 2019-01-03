@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|allerta:400" rel="stylesheet">
+  <title>Precios de tus mejores guitarras</title>
+</head>
+<body class="precios">
+    <header id="header" class="header background">
+      <div class="contenedor">
+        <figure class="logotipo">
+          <img src="web/images/invie.png" width="186" height="60"alt="Invie Logotipo">
+        </figure>
+        <span class="burger-button icon-menu" id="burger-button"></span>
+        <nav class="menu" id="menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="index.html#guitarras">Guitarras</a>
+            </li>
+            <li>
+              <a href="/precios/index.html">Precios</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <section class="table">
+    <div class="contenedor">
+    <table>
+      </tbody>
+      <thead>
+        <tr>
+          <th>
+            modelo
+          </th>
+          <th>
+            precios
+          </th>
+          <th>
+            Descripcion
+          </th>
+          <th>
+            Descripcion
+          </th>
+          <th>
+            Descripcion
+          </th>
+          <th>
+            Descripcion
+          </th>
+          <th>
+            Descripcion
+          </th>
+          <th>
+            Descripcion
+          </th>
+          <th>
+            Descripcion
+          </th>
+          <th>
+            Descripcion
+          </th>
+          <th>
+            Descripcion
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Invie Classic</td>
+          <td>$1000</td>
+          <td>Una guitarra muy pro</td>
+        </tr>
+        <tr>
+          <td>Invie Classic</td>
+          <td>$1000</td>
+          <td>Una guitarra muy pro</td>
+        </tr>
+        <tr>
+          <td>Invie Classic</td>
+          <td>$1000</td>
+          <td>Una guitarra muy pro</td>
+        </tr>
+    </table>
+  </div>
+  </section>
+<footer class="footer">
+  <div class="contenedor">
+    <div class="contacto">
+      <img src="web/images/invie-white.png" alt="logotipo blanco" width="300px">
+      <a href="tel:+57302454132"><strong>Telefono</strong> <span>302454132</span></a>
+      <a href="mailto:contacto@invie.com" ><strong>E-mail</strong><span>contacto@invie.com</span></a>
+    </div>
+    <form class="formulario">
+      <div class="col1">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" value="" id="nombre">
+      <label for="e-mail">E-mail</label>
+      <input type="E-mail" name="email" value="" id="e-mail">
+        <div class="sexo">
+          <label for="hombre">
+            <input type="radio" name="sexo" value="hombre" id="hombre">Hombre
+          </label>
+          <label for="mujer">
+            <input type="radio" name="sexo" value="mujer" id="mujer" checked>Mujer
+          </label>
+        </div>
+        <div class="intereses">
+          <label for="">
+            <input type="checkbox" name="intereses" value="cotizacion" id="cotizacion" checked> Cotizacion
+          </label>
+          <label for="">
+            <input type="checkbox" name="intereses" value="intereses" id="intereses"> Intereses
+          </label>
+          <label for="">
+            <input type="checkbox" name="intereses" value="comentarios" id="comentarios"> Comentarios
+          </label>
+          <label for="">
+            <input type="checkbox" name="intereses" value="otros" id="Otros"> Otros
+          </label>
+        </div>
+      </div>
+      <div class="col2">
+        <label for="Comentaros"> Comentarios </label>
+        <textarea name="Comentarios" rows="7" cols="30" id="comentarios"></textarea>
+        <input type="submit" name="" class="button">
+      </div>
+    </form>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+<script >
+let $burgerButton = document.getElementById('burger-button')
+let $menu = document.getElementById('menu')
+function toggleMenu (){
+  $menu.classList.toggle('active')
+  $burgerButton.classList.toggle('icon-close')
+  document.body.classList.toggle('opened')
+}
+function showMenu (){
+  $menu.classList.add('active')
+  $burgerButton.classList.toggle('icon-close')
+  document.body.classList.toggle('opened')
+}
+function hideMenu (){
+  $menu.classList.remove('active')
+  $burgerButton.classList.toggle('icon-close')
+  document.body.classList.toggle('opened')
+}
+let consulta = window.matchMedia('(max-width: 500px)')
+consulta.addListener(mediaQuery)
+function mediaQuery(){
+  if (consulta.matches) {
+    $burgerButton.addEventListener('touchstart',toggleMenu)
+
+  }else{
+    $burgerButton.removeEventListener('touchstart',toggleMenu)
+
+    console.log('No se cumplio la condicion')
+  }
+}
+ mediaQuery()
+
+// Lazy loading
+let bLazy = new Blazy({
+  //options
+  selector: 'img'
+})
+// Gestos
+let $body = document.body
+//swipeleft
+var gestos= new Hammer($body);
+gestos.on('swipeleft', hideMenu)
+// swiperight
+gestos.on('swiperight', showMenu)
+// let hammeright = new Hammmer('$body')
+// hammer.on('swiperight', (ev)=> console.log(ev))
+</script>
+</body>
+</html>
